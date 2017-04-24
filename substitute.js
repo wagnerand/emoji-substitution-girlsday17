@@ -14,7 +14,7 @@ let regexs = new Map();
 for (let word of emojiMap.keys()) {
   // We want a global, case-insensitive replacement.
   // @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
-  regexs.set(word, new RegExp(word, 'gi'));
+  regexs.set(word, new RegExp('\\b' + word + '\\b', 'gi'));
 }
 
 /**
